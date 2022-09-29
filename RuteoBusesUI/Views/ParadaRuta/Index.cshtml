@@ -1,0 +1,58 @@
+﻿ @model IEnumerable<RuteoBusesDAL.ParadaRuta>
+
+@{
+    ViewData["Title"] = "Paradas de ruta";
+}
+
+<h1>Paradas de ruta</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear nuevo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.paradaRutaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombreParadaRuta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rutaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.busId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.paradaRutaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombreParadaRuta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rutaId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.busId)
+            </td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="ParadaRuta" asp-action="Details" asp-route-id="@item.paradaRutaId"
+                       class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i> Detalles</a>
+                        <a asp-controller="ParadaRuta" asp-action="Edit" asp-route-id="@item.paradaRutaId"
+                       class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i> Editar</a>
+                        <a asp-controller="ParadaRuta" asp-action="Delete" asp-route-id="@item.paradaRutaId"
+                       class="btn btn-danger mx-2"><i class="bi bi-trash"></i> Eliminar</a>
+                    </div>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

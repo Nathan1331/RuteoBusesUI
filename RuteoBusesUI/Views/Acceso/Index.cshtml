@@ -1,0 +1,39 @@
+﻿@model RuteoBusesDAL.Usuario
+@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/login.css" />
+</head>
+<body>
+    <div class="row mt-5">
+
+        <div class="col-sm-4 offset-sm-4">
+
+            <form asp-controller = "Acceso" asp-action ="Index" method="post" >
+                <div class="imgcontainer">
+                    <img src="https://www.clipartmax.com/png/middle/220-2204775_access-login-png-logo-de-login.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="Identificacion"><b>Identificacion</b></label>
+                    <input type="text" class="form-control" asp-for="Identificacion" placeholder="Enter Username" required>
+
+                    <label for="psw"><b>Clave</b></label>
+                   <input type="password" class="form-control" asp-for="clave" placeholder="Introduzca contraseña" required>
+
+                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                </div>
+             </form>
+
+        </div>
+
+    </div>
+     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

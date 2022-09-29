@@ -1,0 +1,45 @@
+﻿@model RuteoBusesDAL.Usuario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <form method="post" asp-action="DeletePost" asp-route-id="choferId">
+        <input asp-for="userId" hidden class="form-control" />
+        <div class="border p-3 mt-4">
+            <div class="row pb-2">
+                <h2 class="text-primary">Delete</h2>
+            </div>
+            <div asp-validation-summary="All"></div>
+            <div class="mb-3">
+                <label asp-for="userId"></label>
+                <input asp-for="userId" disabled class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="nombre"></label>
+                <input asp-for="nombre" disabled class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="clave"></label>
+                <input asp-for="clave" disabled class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Identificacion"></label>
+                <input asp-for="Identificacion" disabled class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="rolId"></label>
+                <input asp-for="rolId" disabled class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+            <a asp-controller="Chofer" asp-action="Index" style="width:150px" class="btn btn-secondary">Back to list</a>
+
+        </div>
+    </form>
+</div>

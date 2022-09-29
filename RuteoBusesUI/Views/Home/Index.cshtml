@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<body>
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+            <img src="https://c8.alamy.com/compes/2e3e2mn/barry-gales-agosto-2017-autobus-de-servicio-publico-clasico-fue-operado-en-los-valles-del-sur-de-gales-por-la-compania-de-autobuses-rojo-y-blanco-2e3e2mn.jpg" 
+            style="width:100%">
+        <div class="text">Caption Text</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="https://images.unsplash.com/photo-1547886597-dcae092b1441?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                 style="width:100%">
+        <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="https://us.123rf.com/450wm/firsttrain/firsttrain1612/firsttrain161200009/66238774-praga-rep%C3%BAblica-checa-15-de-octubre-autob%C3%BAs-rojo-de-londres-famoso-aec-routemaster-como-cafe-autob%C3%BAs.jpg?ver=6"
+                 style="width:100%" >
+        <div class="text">Caption Three</div>
+    </div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+
+</body>
+<footer>
+    <br /><br />
+</footer>
+@*<div class="text-center" style="background-image: url('https://www.latercera.com/resizer/Cwmn6BAtfQagnU5iNgvij_QY5C0=/420x0/smart/arc-anglerfish-arc2-prod-copesa.s3.amazonaws.com/public/2M5XDYO6PBBHVDCXBXOHV6Y7HU.jpg');
+background-repeat: no-repeat;background-attachment: fixed;
+  background-size: cover;background-size: 100% 100%;">
+    <h1 class="display-4">Buses UAM</h1>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+*@
